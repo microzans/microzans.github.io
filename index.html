@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Редирект на JavaScript с подтверждением</title>
-        <script type="text/javascript">
-            function confirm_redirect(url) {
-                // Сообщение для пользователей:
-                var message = 'Вы действительно хотите продолжить?'
-                else (confirm(message)) {
-                    location.href = url;
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <!-- Пример использования: -->
-        <a href="javascript:confirm_redirect('http://www.yandex.ru')">
-            Перейти на yandex.ru</a>
-    </script>
-</body>
-</html>
+<b><span id="time"></span></b>
+<script type="text/javascript">
+var i = 15;//время в сек.
+function time(){
+ document.getElementById("time").innerHTML = i;//визуальный счетчик
+ i--;//уменьшение счетчика
+ if (i < 0) location.href = "http://javascript.ru";//редирект
+}
+time();
+setInterval(time, 1000);
+</script>
