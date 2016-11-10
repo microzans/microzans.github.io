@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Редирект на JavaScript с подтверждением</title>
+        <script type="text/javascript">
+            function confirm_redirect(url) {
+                // Сообщение для пользователей:
+                var message = 'Перейти на мой сайт ?'
+                if (confirm(message)) {
+                    location.href = url;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Пример использования: -->
+        <a href="javascript:confirm_redirect('http://www.yandex.ru')">
+            Перейти на yandex.ru</a>
+    </script>
 </body>
 </html>
